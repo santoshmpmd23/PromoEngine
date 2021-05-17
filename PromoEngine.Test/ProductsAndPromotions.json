@@ -1,0 +1,45 @@
+{
+  "Products": [
+    {
+      "ProductCode": "A",
+      "Price": 50
+    },
+    {
+      "ProductCode": "B",
+      "Price": 30
+    },
+    {
+      "ProductCode": "C",
+      "Price": 20
+    },
+    {
+      "ProductCode": "D",
+      "Price": 15
+    }
+  ],
+  "Promotions": [
+    {
+      "PromotionId": 1,
+      "Quantity": 3,
+      "Type": "Individual",
+      "ProductCode": [ "A" ],
+      "Price": 130
+    },
+    {
+      "PromotionId": 2,
+      "Quantity": 2,
+      "Type": "Individual",
+      "ProductCode": [ "B" ],
+      "Price": 45
+    },
+    {
+      "PromotionId": 3,
+      "Quantity": 2,
+      "Type": "Combination",
+      "ProductCode": [ "C","D" ],
+      "Price": 30
+    }
+
+  ]
+
+}
