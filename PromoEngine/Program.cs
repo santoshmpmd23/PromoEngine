@@ -19,9 +19,9 @@ namespace PromoEngine
             {
                 PromoEngineClient client = serviceProvider.GetService<PromoEngineClient>();
 
-               // client.ScenarioA();
+                client.ScenarioA();
 
-               // client.ScenarioB();
+                client.ScenarioB();
 
                 client.ScenarioC();
             }
