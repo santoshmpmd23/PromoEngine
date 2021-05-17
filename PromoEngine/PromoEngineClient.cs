@@ -53,7 +53,7 @@ namespace PromoEngine
             {
                 new CheckoutProduct(){ Product= prodsList.FirstOrDefault(p=>p.ProductCode=="A"),Quantity=3 },
                 new CheckoutProduct(){ Product= prodsList.FirstOrDefault(p=>p.ProductCode=="B"),Quantity=5 },
-                new CheckoutProduct(){ Product= prodsList.FirstOrDefault(p=>p.ProductCode=="C"),Quantity=2 },
+                new CheckoutProduct(){ Product= prodsList.FirstOrDefault(p=>p.ProductCode=="C"),Quantity=1 },
                 new CheckoutProduct(){ Product= prodsList.FirstOrDefault(p=>p.ProductCode=="D"),Quantity=1 }
             };
 

@@ -43,12 +43,13 @@ namespace PromoEngine.Service
             });
             try
             {
-                if (checkoutProducts.Count < appliedPromotion.ProductCode.Count)
-                    return checkoutProductCurrent.Product.Price;
+                if (checkoutProducts.Where(p=> p.Quantity > 0).Count() < appliedPromotion.ProductCode.Count)
+                    return checkoutProductCurrent.Product.Price * checkoutProductCurrent.Quantity;
 
                 var eachProdQnty = appliedPromotion.Quantity / appliedPromotion.ProductCode.Count;
                 var eachprodPrice = appliedPromotion.Price / appliedPromotion.ProductCode.Count;
-                var freq = checkoutProductCurrent.Quantity / eachProdQnty;
+                var minQty = checkoutProducts.Min(p => p.Quantity);
+                var freq = minQty / eachProdQnty;
                 if (freq > 0)
                 {
                     offerPrice = (checkoutProductCurrent.Product.Price * (checkoutProductCurrent.Quantity - (eachProdQnty * freq))) + (eachprodPrice * eachProdQnty * freq);
